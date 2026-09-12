@@ -1,6 +1,7 @@
-# Raw competition data - keep local
+# Raw competition data
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/track1_chargebacks.json
 
 # Python
 __pycache__/
