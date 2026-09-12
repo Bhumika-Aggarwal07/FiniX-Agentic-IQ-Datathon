@@ -1,0 +1,14 @@
+# Raw competition data - keep local
+data/raw/*
+!data/raw/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
