@@ -424,3 +424,53 @@ df.to_csv(OUTPUT_FILE, index=False)
 print("\n--- Export complete ---")
 print("Cleaned dataset saved to:", OUTPUT_FILE)
 print("Final rows exported:", len(df))
+
+import pandas as pd
+
+INPUT_FILE = "data/processed/chargebacks_cleaned.csv"
+
+df = pd.read_csv(INPUT_FILE)
+
+print("========== CHARGEBACK FEATURE ENGINEERING ==========")
+print("Input rows:", len(df))
+print("Input columns:", len(df.columns))
+# Reporting delay: transaction to chargeback report
+df["reporting_delay_hours"] = (
+    pd.to_datetime(df["reported_timestamp"], errors="coerce")
+    - pd.to_datetime(df["transaction_timestamp"], errors="coerce")
+).dt.total_seconds() / 3600
+
+print("\n--- Reporting delay ---")
+print("Missing reporting delays:", df["reporting_delay_hours"].isna().sum())
+print("Minimum delay (hours):", df["reporting_delay_hours"].min())
+print("Maximum delay (hours):", df["reporting_delay_hours"].max())
+print("Average delay (hours):", df["reporting_delay_hours"].mean())
+# Bank response delay: chargeback report to bank response
+df["bank_response_delay_hours"] = (
+    pd.to_datetime(df["bank_response_timestamp"], errors="coerce")
+    - pd.to_datetime(df["reported_timestamp"], errors="coerce")
+).dt.total_seconds() / 3600
+
+print("\n--- Bank response delay ---")
+print("Missing bank response delays:", df["bank_response_delay_hours"].isna().sum())
+print("Minimum delay (hours):", df["bank_response_delay_hours"].min())
+print("Maximum delay (hours):", df["bank_response_delay_hours"].max())
+print("Average delay (hours):", df["bank_response_delay_hours"].mean())
+
+# Bank response delay: chargeback report to bank response
+df["bank_response_delay_hours"] = (
+    pd.to_datetime(df["bank_response_timestamp"], errors="coerce")
+    - pd.to_datetime(df["reported_timestamp"], errors="coerce")
+).dt.total_seconds() / 3600
+
+print("\n--- Bank response delay ---")
+print("Missing bank response delays:", df["bank_response_delay_hours"].isna().sum())
+print("Minimum delay (hours):", df["bank_response_delay_hours"].min())
+print("Maximum delay (hours):", df["bank_response_delay_hours"].max())
+print("Average delay (hours):", df["bank_response_delay_hours"].mean())
+# Validate bank response delay
+negative_bank_delays = (
+    df["bank_response_delay_hours"] < 0
+).sum()
+
+print("Negative bank response delays:", negative_bank_delays)
