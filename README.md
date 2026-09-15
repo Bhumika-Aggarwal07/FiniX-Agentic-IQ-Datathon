@@ -1,4 +1,4 @@
-# FiniX — UPI Fraud Ring & Merchant Intelligence
+# FiniX - UPI Fraud Ring & Merchant Intelligence
 
 > **From messy UPI data to explainable fraud investigations.**
 
