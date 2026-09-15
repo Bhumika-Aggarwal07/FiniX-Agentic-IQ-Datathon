@@ -410,6 +410,9 @@ to:
 ---
 
 # 11 Executive Dashboard
+## Live Dashboard
+
+ [View FiniX Dashboard](https://finixanalytics.streamlit.app/)
 
 The dashboard is designed around an **investigator workflow**, rather than a collection of unrelated charts.
 
