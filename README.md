@@ -103,7 +103,7 @@ For example, negative transaction amounts may be unusual, but removing them woul
 
 ---
 
-# 04 Transaction Data Rescue — Evidence
+# 04 Transaction Data Rescue Evidence
 
 The raw UPI transaction dataset contains:
 
