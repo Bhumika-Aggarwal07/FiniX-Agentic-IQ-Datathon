@@ -46,7 +46,7 @@ for message in st.session_state["investigation_messages"]:
         if message.get("provider"):
             st.caption(message["provider"])
 
-prompt = st.chat_input("Ask about an entity (e.g. USR35882, MCH001) or a risk pattern", submit_mode="disable")
+prompt = st.chat_input("Ask about an entity (e.g. USR35882, MCH001)")
 query = prompt or st.session_state.pop("investigation_query", "")
 if query:
     st.session_state["investigation_messages"].append({"role": "user", "content": query})
