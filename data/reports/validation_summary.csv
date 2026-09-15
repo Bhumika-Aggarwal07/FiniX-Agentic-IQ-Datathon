@@ -1,0 +1,91 @@
+dataset,check,numerator,denominator,percentage,status,details
+transactions,required schema columns,0,8,0.0,PASS,All required source columns are present.
+transactions,remaining exact duplicate rows,0,20000,0.0,PASS,Only exact source-row duplicates should have been removed.
+transactions,missing values: txn_id,0,20000,0.0,PASS,Missing values are preserved rather than imputed.
+transactions,missing values: timestamp,0,20000,0.0,PASS,Missing values are preserved rather than imputed.
+transactions,missing values: user_id,0,20000,0.0,PASS,Missing values are preserved rather than imputed.
+transactions,missing values: merchant_id,0,20000,0.0,PASS,Missing values are preserved rather than imputed.
+transactions,missing values: amount,420,20000,2.1,WARN,Missing values are preserved rather than imputed.
+transactions,missing values: utr,1000,20000,5.0,WARN,Missing values are preserved rather than imputed.
+transactions,missing values: mcc,2872,20000,14.36,WARN,Missing values are preserved rather than imputed.
+transactions,missing values: status,0,20000,0.0,PASS,Missing values are preserved rather than imputed.
+transactions,missing values: amount_invalid_flag,0,20000,0.0,PASS,Missing values are preserved rather than imputed.
+transactions,missing values: amount_parse_failure_flag,0,20000,0.0,PASS,Missing values are preserved rather than imputed.
+transactions,missing values: timestamp_parse_failure_flag,0,20000,0.0,PASS,Missing values are preserved rather than imputed.
+transactions,missing values: mcc_valid,0,20000,0.0,PASS,Missing values are preserved rather than imputed.
+transactions,missing values: status_unmapped_flag,0,20000,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,required schema columns,0,12,0.0,PASS,All required source columns are present.
+kyc,remaining exact duplicate rows,201,36122,0.56,WARN,Only exact source-row duplicates should have been removed.
+kyc,missing values: user_id,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: full_name,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: pan,1883,36122,5.21,WARN,Missing values are preserved rather than imputed.
+kyc,missing values: aadhaar,2641,36122,7.31,WARN,Missing values are preserved rather than imputed.
+kyc,missing values: date_of_birth,11727,36122,32.46,WARN,Missing values are preserved rather than imputed.
+kyc,missing values: city,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: state,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: monthly_income,6135,36122,16.98,WARN,Missing values are preserved rather than imputed.
+kyc,missing values: occupation,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: signup_timestamp,9094,36122,25.18,WARN,Missing values are preserved rather than imputed.
+kyc,missing values: kyc_status,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: risk_segment,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: pan_valid,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: aadhaar_valid,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: monthly_income_invalid_flag,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: monthly_income_parse_failure_flag,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: date_of_birth_parse_failure_flag,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: signup_timestamp_parse_failure_flag,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: kyc_status_unmapped_flag,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+kyc,missing values: risk_segment_unmapped_flag,0,36122,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,required schema columns,0,11,0.0,PASS,All required source columns are present.
+merchants,remaining exact duplicate rows,96,6198,1.55,WARN,Only exact source-row duplicates should have been removed.
+merchants,missing values: merchant_id,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: merchant_name,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: mcc,513,6198,8.28,WARN,Missing values are preserved rather than imputed.
+merchants,missing values: merchant_category,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: business_type,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: city,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: state,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: onboarding_date,1573,6198,25.38,WARN,Missing values are preserved rather than imputed.
+merchants,missing values: settlement_account,2445,6198,39.45,WARN,Missing values are preserved rather than imputed.
+merchants,missing values: merchant_status,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: declared_avg_ticket_size,872,6198,14.07,WARN,Missing values are preserved rather than imputed.
+merchants,missing values: mcc_valid,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: settlement_account_valid,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: declared_avg_ticket_size_invalid_flag,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: declared_avg_ticket_size_parse_failure_flag,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: onboarding_date_parse_failure_flag,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+merchants,missing values: merchant_status_unmapped_flag,0,6198,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,required schema columns,0,13,0.0,PASS,All required source columns are present.
+chargebacks,remaining exact duplicate rows,0,2800,0.0,PASS,Only exact source-row duplicates should have been removed.
+chargebacks,missing values: complaint_id,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: txn_id,77,2800,2.75,WARN,Missing values are preserved rather than imputed.
+chargebacks,missing values: user_id,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: merchant_id,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: transaction_timestamp,230,2800,8.21,WARN,Missing values are preserved rather than imputed.
+chargebacks,missing values: reported_timestamp,295,2800,10.54,WARN,Missing values are preserved rather than imputed.
+chargebacks,missing values: disputed_amount,399,2800,14.25,WARN,Missing values are preserved rather than imputed.
+chargebacks,missing values: reason_code,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: complaint_text,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: resolution_status,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: bank_response_timestamp,709,2800,25.32,WARN,Missing values are preserved rather than imputed.
+chargebacks,missing values: severity,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: channel,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: disputed_amount_invalid_flag,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: disputed_amount_parse_failure_flag,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: transaction_timestamp_parse_failure_flag,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: reported_timestamp_parse_failure_flag,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: bank_response_timestamp_parse_failure_flag,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: reported_before_transaction_flag,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: bank_response_before_transaction_flag,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: reason_code_unmapped_flag,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: resolution_status_unmapped_flag,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: severity_unmapped_flag,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+chargebacks,missing values: channel_unmapped_flag,0,2800,0.0,PASS,Missing values are preserved rather than imputed.
+transactions,unique nonmissing txn_id,0,20000,0.0,PASS,Required for chargeback-to-transaction linkage.
+chargebacks,unique complaint_id,0,2800,0.0,PASS,Each complaint should remain an individually auditable record.
+kyc,repeated user_id,7202,36122,19.94,WARN,Repeated KYC profiles are retained and summarized before joining.
+merchants,repeated merchant_id,1855,6198,29.93,WARN,Repeated merchant references are retained and summarized before joining.
+transactions,negative amount after cleaning,0,20000,0.0,PASS,Invalid negative monetary values must not remain in the derived numeric field.
+chargebacks,negative disputed_amount after cleaning,0,2800,0.0,PASS,Invalid negative monetary values must not remain in the derived numeric field.
+kyc,negative monthly_income after cleaning,0,36122,0.0,PASS,Invalid negative monetary values must not remain in the derived numeric field.
+merchants,negative declared_avg_ticket_size after cleaning,0,6198,0.0,PASS,Invalid negative monetary values must not remain in the derived numeric field.

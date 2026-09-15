@@ -1,0 +1,45 @@
+dataset,issue,column,rule,numerator,denominator,percentage
+chargebacks,chargebacks exact duplicates removed,ALL,Remove exact rows only in their raw source representation.,84,2884,2.91
+chargebacks,chargebacks ID standardization,complaint_id,Canonical CBK identifier; no truncation.,0,2884,0.0
+chargebacks,chargebacks missing identifier,complaint_id,Preserve absent or malformed identifier as missing.,0,2800,0.0
+chargebacks,chargebacks ID standardization,txn_id,Canonical TXN identifier; no truncation.,102,2884,3.54
+chargebacks,chargebacks missing identifier,txn_id,Preserve absent or malformed identifier as missing.,77,2800,2.75
+chargebacks,chargebacks ID standardization,user_id,Canonical USR identifier; no truncation.,995,2884,34.5
+chargebacks,chargebacks missing identifier,user_id,Preserve absent or malformed identifier as missing.,0,2800,0.0
+chargebacks,chargebacks ID standardization,merchant_id,Canonical MCH identifier; no truncation.,856,2884,29.68
+chargebacks,chargebacks missing identifier,merchant_id,Preserve absent or malformed identifier as missing.,0,2800,0.0
+chargebacks,chargebacks invalid negative monetary values,disputed_amount,Flag and preserve as missing; do not reverse sign.,220,2884,7.63
+chargebacks,chargebacks monetary parse failures,disputed_amount,Malformed present values become missing and are flagged.,0,2884,0.0
+chargebacks,chargebacks timestamp parse failures,transaction_timestamp,Unsupported or ambiguous timestamps become missing and are flagged.,0,2884,0.0
+chargebacks,chargebacks timestamp parse failures,reported_timestamp,Unsupported or ambiguous timestamps become missing and are flagged.,0,2884,0.0
+chargebacks,chargebacks timestamp parse failures,bank_response_timestamp,Unsupported or ambiguous timestamps become missing and are flagged.,0,2884,0.0
+chargebacks,chargebacks impossible chronology,reported_timestamp,Flag timestamp before transaction and set the derived value to missing.,92,2884,3.19
+chargebacks,chargebacks impossible chronology,bank_response_timestamp,Flag timestamp before transaction and set the derived value to missing.,8,2884,0.28
+chargebacks,chargebacks unmapped category values,reason_code,Retain normalized unexpected categories and flag them.,0,2884,0.0
+chargebacks,chargebacks unmapped category values,resolution_status,Retain normalized unexpected categories and flag them.,0,2884,0.0
+chargebacks,chargebacks unmapped category values,severity,Retain normalized unexpected categories and flag them.,0,2884,0.0
+chargebacks,chargebacks unmapped category values,channel,Retain normalized unexpected categories and flag them.,0,2884,0.0
+chargebacks,chargebacks missing values after cleaning,complaint_id,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,txn_id,Preserve missingness; no imputation.,77,2800,2.75
+chargebacks,chargebacks missing values after cleaning,user_id,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,merchant_id,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,transaction_timestamp,Preserve missingness; no imputation.,230,2800,8.21
+chargebacks,chargebacks missing values after cleaning,reported_timestamp,Preserve missingness; no imputation.,295,2800,10.54
+chargebacks,chargebacks missing values after cleaning,disputed_amount,Preserve missingness; no imputation.,399,2800,14.25
+chargebacks,chargebacks missing values after cleaning,reason_code,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,complaint_text,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,resolution_status,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,bank_response_timestamp,Preserve missingness; no imputation.,709,2800,25.32
+chargebacks,chargebacks missing values after cleaning,severity,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,channel,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,disputed_amount_invalid_flag,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,disputed_amount_parse_failure_flag,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,transaction_timestamp_parse_failure_flag,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,reported_timestamp_parse_failure_flag,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,bank_response_timestamp_parse_failure_flag,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,reported_before_transaction_flag,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,bank_response_before_transaction_flag,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,reason_code_unmapped_flag,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,resolution_status_unmapped_flag,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,severity_unmapped_flag,Preserve missingness; no imputation.,0,2800,0.0
+chargebacks,chargebacks missing values after cleaning,channel_unmapped_flag,Preserve missingness; no imputation.,0,2800,0.0

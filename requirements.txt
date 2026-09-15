@@ -1,0 +1,7 @@
+streamlit>=1.60,<2
+pandas>=2.2
+numpy>=1.26
+altair>=5.5
+networkx>=3.3
+pytest>=8
+Pillow>=10.0

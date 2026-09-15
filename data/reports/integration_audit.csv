@@ -1,0 +1,8 @@
+check,numerator,denominator,percentage,detail
+chargeback records retained after linkage,2800,2800,100.0,One linkage record remains per chargeback complaint.
+transactions found for chargebacks,2607,2800,93.11,Linked by standardized txn_id without identity replacement.
+chargebacks missing txn_id,77,2800,2.75,Cannot be linked to a transaction.
+chargebacks with identity mismatch,2607,2607,100.0,"Observed source discrepancy, not a fraud determination."
+chargeback pairs disconnected from transaction network,2800,2800,100.0,Chargeback user-merchant pair is not observed in transaction pairs.
+exact disputed amount matches,0,2200,0.0,Exact two-decimal comparison where both values exist.
+transaction rows retained after chargeback aggregation,20000,20000,100.0,"Chargeback aggregates are joined, never raw one-to-many chargeback rows."

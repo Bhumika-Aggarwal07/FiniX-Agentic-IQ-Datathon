@@ -1,0 +1,5 @@
+check,numerator,denominator,percentage,detail
+transaction network nodes,27924,27924,100.0,Users and merchants connected by observed transaction pairs.
+transaction network edges,20000,22795,87.74,Observed transaction pairs; chargeback-only pairs remain separate signal edges.
+chargeback-only relationship edges,2795,22795,12.26,Chargeback user-merchant pairs not observed in transaction pairs.
+transaction components,7924,27924,28.38,Connected components from transactions only.

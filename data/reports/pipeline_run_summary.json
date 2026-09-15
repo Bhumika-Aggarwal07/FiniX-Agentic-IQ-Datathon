@@ -1,0 +1,17 @@
+{
+  "generated_at_utc": "2026-09-15T13:07:01.772676+00:00",
+  "cleaned_rows": {
+    "transactions": 20000,
+    "kyc": 36122,
+    "merchants": 6198,
+    "chargebacks": 2800
+  },
+  "validation_checks": 90,
+  "validation_warnings": 21,
+  "chargeback_linkage_rows": 2800,
+  "transaction_intelligence_rows": 20000,
+  "user_risk_rows": 42245,
+  "merchant_risk_rows": 8612,
+  "network_nodes": 27924,
+  "network_edges": 22795
+}

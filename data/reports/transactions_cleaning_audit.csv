@@ -1,0 +1,28 @@
+dataset,issue,column,rule,numerator,denominator,percentage
+transactions,transactions exact duplicates removed,ALL,Remove exact rows only in their raw source representation.,400,20400,1.96
+transactions,transactions ID standardization,txn_id,Canonical TXN identifier; no truncation.,0,20400,0.0
+transactions,transactions missing identifier,txn_id,Preserve absent or malformed identifier as missing.,0,20000,0.0
+transactions,transactions ID standardization,user_id,Canonical USR identifier; no truncation.,0,20400,0.0
+transactions,transactions missing identifier,user_id,Preserve absent or malformed identifier as missing.,0,20000,0.0
+transactions,transactions ID standardization,merchant_id,Canonical MCH identifier; no truncation.,0,20400,0.0
+transactions,transactions missing identifier,merchant_id,Preserve absent or malformed identifier as missing.,0,20000,0.0
+transactions,transactions ID standardization,utr,Canonical UTR identifier; no truncation.,1842,20400,9.03
+transactions,transactions missing identifier,utr,Preserve absent or malformed identifier as missing.,1000,20000,5.0
+transactions,transactions invalid negative monetary values,amount,Flag and preserve as missing; do not reverse sign.,420,20400,2.06
+transactions,transactions monetary parse failures,amount,Malformed present values become missing and are flagged.,0,20400,0.0
+transactions,transactions timestamp parse failures,timestamp,Unsupported or ambiguous timestamps become missing and are flagged.,0,20400,0.0
+transactions,transactions invalid MCC,mcc,Accept exactly four digits after removing presentation prefixes.,2890,20400,14.17
+transactions,transactions unmapped category values,status,Retain normalized unexpected categories and flag them.,0,20400,0.0
+transactions,transactions missing values after cleaning,txn_id,Preserve missingness; no imputation.,0,20000,0.0
+transactions,transactions missing values after cleaning,timestamp,Preserve missingness; no imputation.,0,20000,0.0
+transactions,transactions missing values after cleaning,user_id,Preserve missingness; no imputation.,0,20000,0.0
+transactions,transactions missing values after cleaning,merchant_id,Preserve missingness; no imputation.,0,20000,0.0
+transactions,transactions missing values after cleaning,amount,Preserve missingness; no imputation.,420,20000,2.1
+transactions,transactions missing values after cleaning,utr,Preserve missingness; no imputation.,1000,20000,5.0
+transactions,transactions missing values after cleaning,mcc,Preserve missingness; no imputation.,2872,20000,14.36
+transactions,transactions missing values after cleaning,status,Preserve missingness; no imputation.,0,20000,0.0
+transactions,transactions missing values after cleaning,amount_invalid_flag,Preserve missingness; no imputation.,0,20000,0.0
+transactions,transactions missing values after cleaning,amount_parse_failure_flag,Preserve missingness; no imputation.,0,20000,0.0
+transactions,transactions missing values after cleaning,timestamp_parse_failure_flag,Preserve missingness; no imputation.,0,20000,0.0
+transactions,transactions missing values after cleaning,mcc_valid,Preserve missingness; no imputation.,0,20000,0.0
+transactions,transactions missing values after cleaning,status_unmapped_flag,Preserve missingness; no imputation.,0,20000,0.0

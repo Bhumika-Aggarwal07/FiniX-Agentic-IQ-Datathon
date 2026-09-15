@@ -1,0 +1,32 @@
+dataset,issue,column,rule,numerator,denominator,percentage
+kyc,kyc exact duplicates removed,ALL,Remove exact rows only in their raw source representation.,278,36400,0.76
+kyc,kyc ID standardization,user_id,Canonical USR identifier; no truncation.,12817,36400,35.21
+kyc,kyc missing identifier,user_id,Preserve absent or malformed identifier as missing.,0,36122,0.0
+kyc,kyc invalid PAN,pan,Uppercase and validate the PAN shape; never correct a value.,2631,36400,7.23
+kyc,kyc invalid Aadhaar,aadhaar,Retain digits and validate twelve-digit shape; never create a value.,6133,36400,16.85
+kyc,kyc invalid negative monetary values,monthly_income,Flag and preserve as missing; do not reverse sign.,1451,36400,3.99
+kyc,kyc monetary parse failures,monthly_income,Malformed present values become missing and are flagged.,1778,36400,4.88
+kyc,kyc timestamp parse failures,date_of_birth,Unsupported or ambiguous timestamps become missing and are flagged.,8806,36400,24.19
+kyc,kyc timestamp parse failures,signup_timestamp,Unsupported or ambiguous timestamps become missing and are flagged.,6208,36400,17.05
+kyc,kyc unmapped category values,kyc_status,Retain normalized unexpected categories and flag them.,0,36400,0.0
+kyc,kyc unmapped category values,risk_segment,Retain normalized unexpected categories and flag them.,0,36400,0.0
+kyc,kyc missing values after cleaning,user_id,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,full_name,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,pan,Preserve missingness; no imputation.,1883,36122,5.21
+kyc,kyc missing values after cleaning,aadhaar,Preserve missingness; no imputation.,2641,36122,7.31
+kyc,kyc missing values after cleaning,date_of_birth,Preserve missingness; no imputation.,11727,36122,32.46
+kyc,kyc missing values after cleaning,city,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,state,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,monthly_income,Preserve missingness; no imputation.,6135,36122,16.98
+kyc,kyc missing values after cleaning,occupation,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,signup_timestamp,Preserve missingness; no imputation.,9094,36122,25.18
+kyc,kyc missing values after cleaning,kyc_status,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,risk_segment,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,pan_valid,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,aadhaar_valid,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,monthly_income_invalid_flag,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,monthly_income_parse_failure_flag,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,date_of_birth_parse_failure_flag,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,signup_timestamp_parse_failure_flag,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,kyc_status_unmapped_flag,Preserve missingness; no imputation.,0,36122,0.0
+kyc,kyc missing values after cleaning,risk_segment_unmapped_flag,Preserve missingness; no imputation.,0,36122,0.0

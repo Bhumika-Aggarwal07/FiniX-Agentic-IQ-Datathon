@@ -1,0 +1,27 @@
+dataset,issue,column,rule,numerator,denominator,percentage
+merchants,merchants exact duplicates removed,ALL,Remove exact rows only in their raw source representation.,12,6210,0.19
+merchants,merchants ID standardization,merchant_id,Canonical MCH identifier; no truncation.,1907,6210,30.71
+merchants,merchants missing identifier,merchant_id,Preserve absent or malformed identifier as missing.,0,6198,0.0
+merchants,merchants invalid MCC,mcc,Accept exactly four digits after removing presentation prefixes.,770,6210,12.4
+merchants,merchants invalid settlement account,settlement_account,Validate alphanumeric account shape; preserve invalid source values.,1282,6210,20.64
+merchants,merchants invalid negative monetary values,declared_avg_ticket_size,Flag and preserve as missing; do not reverse sign.,501,6210,8.07
+merchants,merchants monetary parse failures,declared_avg_ticket_size,Malformed present values become missing and are flagged.,0,6210,0.0
+merchants,merchants timestamp parse failures,onboarding_date,Unsupported or ambiguous timestamps become missing and are flagged.,1074,6210,17.29
+merchants,merchants unmapped category values,merchant_status,Retain normalized unexpected categories and flag them.,0,6210,0.0
+merchants,merchants missing values after cleaning,merchant_id,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,merchant_name,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,mcc,Preserve missingness; no imputation.,513,6198,8.28
+merchants,merchants missing values after cleaning,merchant_category,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,business_type,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,city,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,state,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,onboarding_date,Preserve missingness; no imputation.,1573,6198,25.38
+merchants,merchants missing values after cleaning,settlement_account,Preserve missingness; no imputation.,2445,6198,39.45
+merchants,merchants missing values after cleaning,merchant_status,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,declared_avg_ticket_size,Preserve missingness; no imputation.,872,6198,14.07
+merchants,merchants missing values after cleaning,mcc_valid,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,settlement_account_valid,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,declared_avg_ticket_size_invalid_flag,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,declared_avg_ticket_size_parse_failure_flag,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,onboarding_date_parse_failure_flag,Preserve missingness; no imputation.,0,6198,0.0
+merchants,merchants missing values after cleaning,merchant_status_unmapped_flag,Preserve missingness; no imputation.,0,6198,0.0
