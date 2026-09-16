@@ -1,4 +1,4 @@
-# FiniX — UPI Fraud Ring & Merchant Intelligence
+# FiniX - UPI Fraud Ring & Merchant Intelligence
 
 > **From messy UPI data to explainable fraud investigations.**
 
@@ -103,7 +103,7 @@ For example, negative transaction amounts may be unusual, but removing them woul
 
 ---
 
-# 04 Transaction Data Rescue — Evidence
+# 04 Transaction Data Rescue Evidence
 
 The raw UPI transaction dataset contains:
 
@@ -410,6 +410,9 @@ to:
 ---
 
 # 11 Executive Dashboard
+## Live Dashboard
+
+ [View FiniX Dashboard](https://finixanalytics.streamlit.app/)
 
 The dashboard is designed around an **investigator workflow**, rather than a collection of unrelated charts.
 
